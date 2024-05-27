@@ -1,0 +1,40 @@
+<app-menu></app-menu>
+    <div class="container">
+        <div class="table-container">
+            <table class="styled-table">
+                <thead>
+                    <tr>
+                        <th>Cedula</th>
+                        <th>Tipo Identificacion</th>
+                        <th>Fecha Nacimiento</th>
+                        <th>Edad</th>
+                        <th>Telefono</th>
+                        <th>Correo</th>
+                        <th>Ver</th>
+                        <th>Modificar</th>
+                        <th>Eliminar</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let usua of usuarios">
+                        <td>{{usua.numIdentificacion}}</td>
+                        <td>{{usua.tipoIdentificacion}}</td>
+                        <td>{{usua.fechaNacimiento}}</td>
+                        <td>{{usua.edad}}</td>
+                        <td>{{usua.telefono}}</td>
+                        <td>{{usua.correo}}</td>
+                        <td><button class="btn btn-view" routerLink="/detalle">Ver <i class="far fa-eye"></i></button></td>
+                        <td><button class="btn btn-modify" routerLink="/modificar">Modificar <i class="far fa-edit"></i></button></td>
+                        <td><button class="btn btn-delete">Eliminar <i class="far fa-trash-alt"></i></button></td>
+                    </tr>
+           
+                
+                </tbody>
+            </table>
+            <div class="mt-m3">
+                <div class="btn btn-agregar" routerLink="/crear"><i class="fa fa-plus-circle" aria-hidden="true"></i>Agregar Usuario</div>
+            </div>
+        </div>
+    </div>
+
+
