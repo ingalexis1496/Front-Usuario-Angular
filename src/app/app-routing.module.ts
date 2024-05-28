@@ -7,7 +7,7 @@ import { ModificarComponent } from './usuario/modificar.component';
 
 const routes: Routes = [
   {path: '', component: ListaComponent},
-  {path: 'detalle', component: DetalleComponent},
+  {path: 'detalle/:cedula', component: DetalleComponent},
   {path: 'crear', component: CrearComponent},
   {path: 'modificar', component: ModificarComponent},
   {path: '**', redirectTo: '', pathMatch: 'full'}

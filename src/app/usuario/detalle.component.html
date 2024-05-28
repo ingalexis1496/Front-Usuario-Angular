@@ -1,19 +1,19 @@
 <app-menu></app-menu>
 <div>
 
-    <div class="container">
+    <div class="container" *ngIf="usuario">
         <div class="card">
             <div class="card-header">
-                <h2 class="card-title">Agregar Usuario</h2>
+                <h2 class="card-title">Datos Usuario</h2>
             </div>
             <div class="card-body">
                 <ul class="card-list">
-                    <li class="list-group-item">Cedula</li>
-                    <li class="list-group-item">Tipo Identificación</li>
-                    <li class="list-group-item">Fecha de Nacimiento</li>
-                    <li class="list-group-item">Edad</li>
-                    <li class="list-group-item">Teléfono</li>
-                    <li class="list-group-item">Correo</li>
+                    <li class="list-group-item">Cedula: {{usuario.numIdentificacion}}</li>
+                    <li class="list-group-item">Tipo Identificación: {{usuario.tipoIdentificacion}}</li>
+                    <li class="list-group-item">Fecha de Nacimiento: {{usuario.fechaNacimiento}}</li>
+                    <li class="list-group-item">Edad: {{usuario.edad}}</li>
+                    <li class="list-group-item">Teléfono: {{usuario.telefono}}</li>
+                    <li class="list-group-item">Correo: {{usuario.correo}}</li>
                 </ul>
             </div>
             <div class="card-footer">

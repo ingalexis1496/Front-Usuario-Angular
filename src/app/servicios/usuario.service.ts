@@ -20,7 +20,10 @@ export class UsuarioService {
 
      return this.httpClient.get<Usuario[]>(this.usuarioURL);
 
-
+  }
+  public detalle(cedula: number): Observable<Usuario> {
+    
+    return this.httpClient.get<Usuario>(this.usuarioURL + `/${cedula}`);
    
 
   }
